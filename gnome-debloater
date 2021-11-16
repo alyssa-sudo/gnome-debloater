@@ -9,7 +9,6 @@ d(x) refers to different debian editions.
 EX: dt is debian testing.
 
 h < displays the help message
-dos < debloats debian buster
 ds < debloats debian bullseye
 dt < debloats debian bookworm
 dus < debloats debian sid"
@@ -19,20 +18,16 @@ case $1 in
 	        echo "$help"
 		;;
 
-	dos | debian-old-stable) 
-		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt upgrade && sudo apt update
-		;;
-
 	ds | debian-stable)
 		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt upgrade && sudo apt update
 		;;
 
 	dt | debian-testing)
-		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon gnome-tour && sudo apt upgrade && sudo apt update
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
 		;;
        
 	dus | debian-unstable)
-		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon gnome-tour && sudo apt upgrade && sudo apt update
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
 		;;
      
 	*)
