@@ -1,17 +1,18 @@
 #!/bin/sh
 
-help="Welcome to gnome-debloater,
+help="Welcome to gnome-debloater, 
 this program is used to debloat the 
 gnome in different debian installs.
 
 d(x) refers to different debian editions.
-ex: dt is debian testing.
 
-h < display help message
-dos < debian buster
-ds < debian bullseye
-dt < debian bookworm
-dus < debian sid"
+EX: dt is debian testing.
+
+h < displays the help message
+dos < debloats debian buster
+ds < debloats debian bullseye
+dt < debloats debian bookworm
+dus < debloats debian sid"
 
 case $1 in
         h | help)
