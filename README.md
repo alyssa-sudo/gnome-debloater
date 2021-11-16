@@ -1,13 +1,13 @@
 # gnome-debloater
 A program used to debloat the  gnome in different Debian installs.
 
-Welcome to gnome-debloater, this program is used to debloat the gnome in different debian installs.
-d(x) refers to different debian editions.
+Welcome to gnome-debloater, this program is used to debloat the gnome in different debian installs.  
+d(x) refers to different debian editions.  
+  
+EX: dt is debian testing.  
 
-EX: dt is debian testing.
-
-h < display help message
-dos < debian buster
-ds < debian bullseye
-dt < debian bookworm
-dus < debian sid"
+h < displays the help message  
+dos < debloats debian buster  
+ds < debloats debian bullseye  
+dt < debloats debian bookworm  
+dus < debloats debian sid   
