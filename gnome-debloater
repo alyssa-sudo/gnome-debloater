@@ -1,0 +1,41 @@
+#!/bin/sh
+
+help="Welcome to gnome-debloater,
+this program is used to debloat the 
+gnome in different debian installs.
+
+d(x) refers to different debian editions.
+ex: dt is debian testing.
+
+h < display help message
+dos < debian buster
+ds < debian bullseye
+dt < debian bookworm
+dus < debian sid"
+
+case $1 in
+        h | help)
+	        echo "$help"
+		;;
+
+	dos | debian-old-stable) 
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt upgrade && sudo apt update
+		;;
+
+	ds | debian-stable)
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt upgrade && sudo apt update
+		;;
+
+	dt | debian-testing)
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon gnome-tour && sudo apt upgrade && sudo apt update
+		;;
+       
+	dus | debian-unstable)
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon gnome-tour && sudo apt upgrade && sudo apt update
+		;;
+     
+	*)
+		echo "$help"
+		;;
+
+esac
