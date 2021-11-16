@@ -6,7 +6,9 @@ d(x) refers to different debian editions.
   
 EX: dt is debian testing. (run this script as root)  
 
-h < displays the help message   
+h < displays the help message
+doos < debloats debian stretch 
+dos < debloats debian buster    
 ds < debloats debian bullseye  
 dt < debloats debian bookworm  
 dus < debloats debian sid   

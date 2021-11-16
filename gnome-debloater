@@ -6,9 +6,11 @@ gnome in different debian installs.
 
 d(x) refers to different debian editions.
 
-EX: dt is debian testing. (run this script as root)
+EX: dt is debian testing.
 
 h < displays the help message
+doos < debloats debian stretch
+dos < debloat debian buster
 ds < debloats debian bullseye
 dt < debloats debian bookworm
 dus < debloats debian sid"
@@ -17,17 +19,25 @@ case $1 in
         h | help)
 	        echo "$help"
 		;;
-
+		
+	doos | debian-oldoldstable)
+		sudo apt purge gimp inkscape brasero reportbug polari gnome-dictionary gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music simple-scan vinagre file-roller gnome-documents && sudo apt autoremove && sudo apt upgrade && sudo apt update
+		;;
+		
+	dos | debian-oldstable)
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music simple-scan vinagre file-roller gnome-documents && sudo apt autoremove && sudo apt upgrade && sudo apt update
+		;;
+				
 	ds | debian-stable)
-		apt-get purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents evince && apt-get autoremove && apt-get upgrade && apt-get update
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt upgrade && sudo apt update
 		;;
 
 	dt | debian-testing)
-		apt-get purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse evince && apt-get autoremove && apt-get install power-profiles-daemon && apt-get upgrade && apt-get update
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
 		;;
        
 	dus | debian-unstable)
-		apt-get purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse evince && apt-get autoremove && apt-get install power-profiles-daemon && apt-get upgrade && apt-get update
+		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
 		;;
      
 	*)
