@@ -6,7 +6,7 @@ gnome in different debian installs.
 
 d(x) refers to different debian editions.
 
-EX: dt is debian testing.
+EX: dt is debian testing. (run this script as root)
 
 h < displays the help message
 ds < debloats debian bullseye
@@ -19,15 +19,15 @@ case $1 in
 		;;
 
 	ds | debian-stable)
-		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && sudo apt autoremove && sudo apt upgrade && sudo apt update
+		apt-get purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents && apt-get autoremove && apt-get upgrade && apt-get update
 		;;
 
 	dt | debian-testing)
-		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
+		apt-get purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && apt-get autoremove && apt-get install gnome-connections power-profiles-daemon && apt-get upgrade && apt-get update
 		;;
        
 	dus | debian-unstable)
-		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
+		apt-get purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && apt-get autoremove && apt-get install gnome-connections power-profiles-daemon && apt-get upgrade && apt-get update
 		;;
      
 	*)
