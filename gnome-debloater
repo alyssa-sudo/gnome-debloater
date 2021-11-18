@@ -33,11 +33,11 @@ case $1 in
 		;;
 
 	dt | debian-testing)
-		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
+		sudo apt purge epiphany gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
 		;;
        
 	dus | debian-unstable)
-		sudo apt purge gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
+		sudo apt purge epiphany gnome-games gnome-sound-recorder im-config evolution synaptic shotwell gnome-todo transmission-gtk gnome-characters gnome-music malcontent file-roller gnome-documents seahorse && sudo apt autoremove && sudo apt install gnome-connections power-profiles-daemon && sudo apt upgrade && sudo apt update
 		;;
      
 	*)
